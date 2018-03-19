@@ -1,0 +1,43 @@
+<!-- databind.wxml -->
+<include src = '../../utils/header.wxml'/>
+<view class='container'>
+  <view id='content' class='content'  bindtap='tapName'>
+    <text>{{content}}</text>
+  </view>
+  <view class='content' hidden='{{flag?true:false}}'>
+    <text>{{hiddencontent}}</text>
+  </view>
+  <view class='content'>{{num1}}+{{num2}}={{num1+num2}}</view>
+  <view class='content'>{{'hello '+user[1].name}}</view>
+  <!-- 条件渲染 -->
+  <block wx:if='{{flag}}'>
+    <!-- 列表渲染 -->
+    <view wx:for='{{user}}' wx:key='userID' class='content'>
+      <text>{{index}}-{{item.name}}-{{item.age}}</text>
+    </view>
+  </block>
+
+  <!-- 条件渲染 -->
+  <block wx:if='{{!flag}}'>
+    <!-- 列表渲染 -->
+    <view wx:for='{{user}}' wx:key='userID' wx:for-index='idx' wx:for-item='user' class='content'>
+      <text>{{idx}}-{{user.name}}-{{user.age}}</text>
+    </view>
+  </block>
+
+  <!-- wx:for嵌套 -->
+  <block wx:for='{{[1,2,3,4,5,6,7,8,9]}}' wx:key='i' wx:for-item='i'>
+    <block wx:for='{{[1,2,3,4,5,6,7,8,9]}}' wx:key='j' wx:for-item='j'>
+      <!-- 条件渲染 -->
+      <view wx:if='{{i<=j}}'>{{i}}*{{j}}={{i*j}}</view>
+    </block>
+  </block>
+
+  <!-- 列表渲染 -->
+  <view wx:for='{{user}}' wx:key='userID'>
+    <!-- 引用模板文件 -->
+    <import src='../../utils/template.wxml'/>
+    <!-- 调用模板 -->
+    <template is='userTemplate' data='{{item}}'></template>
+  </view>
+</view>

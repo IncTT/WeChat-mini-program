@@ -1,0 +1,4 @@
+<!-- header.wxml -->
+<view class='container'>
+  <text>This is a test!</text>
+</view>

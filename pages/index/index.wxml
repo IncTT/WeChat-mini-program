@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="loveClick">
+    <button wx:if="{{!hasSentence}}" bindtap='getSentence'> 点一下看看我想对你说什么？ </button>
+    <block wx:else>
+      <text class="user-motto">{{motto}}</text>
+    </block>
+  </view>
+  <view class='reset'>
+    <button bindtap='reset' style='display:{{btn_reset_display}}'>重置</button>
+  </view>
+</view>

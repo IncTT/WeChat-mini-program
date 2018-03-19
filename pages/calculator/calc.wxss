@@ -1,0 +1,57 @@
+/* calc.wxss */
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding-top: 10rpx;
+}
+
+.resultBox {
+  background-color: #fff;
+  text-align: right;
+  margin: 50rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  height: 100rpx;
+  width: 100%;
+  font-size: 80rpx;
+  
+}
+
+.tempBox {
+  background-color: #fff;
+  height: 80rpx;  
+  width: 670rpx;
+  font-size: 40rpx;
+  text-align: right;
+  overflow-x: scroll;
+  overflow-y:hidden;
+  display: block;
+}
+
+.btnGroup {
+  display: flex;
+  flex-direction: row;
+}
+
+.btnItem {
+  width: 160rpx;
+  height: 160rpx;
+  margin: 10rpx;
+  background-color: #eee;
+  text-align: center;
+  line-height: 160rpx;
+  border-radius: 10px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-hover-num {
+  background-color: #888;
+}
+
+.btn-hover-symbol {
+  background-color: #06f;
+}

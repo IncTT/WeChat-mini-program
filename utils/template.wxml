@@ -1,0 +1,9 @@
+<!-- template.wxml -->
+
+<!-- 定义模板 -->
+<template name='userTemplate'>
+  <view class='content'>
+    <view>姓名:{{item.name}}</view>
+    <view>年龄:{{item.age}}</view>
+  </view>
+</template>

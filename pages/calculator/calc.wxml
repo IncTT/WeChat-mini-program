@@ -1,0 +1,42 @@
+<!-- calc.wxml -->
+<!-- 主框体 -->
+<view class='content'>
+  <view>
+    <text class='tempBox'>{{temp}}</text>
+  </view>
+  <!-- 计算结果 -->
+  <view class='resultBox'>
+    {{result}}
+  </view>
+  <!-- 计算器按钮 -->
+  <view class='btnGroup'>
+    <button data-value='cencel' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>CE</button>
+    <button data-value='clear' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>C</button>
+    <button data-value='back' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>←</button>
+    <button data-value='div' class='btnItem' hover-class='btn-hover-symbol' bindtap='clickButton'>÷</button>
+  </view>
+  <view class='btnGroup'>
+    <button data-value='7' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>7</button>
+    <button data-value='8' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>8</button>
+    <button data-value='9' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>9</button>
+    <button data-value='mul' class='btnItem' hover-class='btn-hover-symbol' bindtap='clickButton'>×</button>
+  </view>
+  <view class='btnGroup'>
+    <button data-value='4' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>4</button>
+    <button data-value='5' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>5</button>
+    <button data-value='6' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>6</button>
+    <button data-value='sub' class='btnItem' hover-class='btn-hover-symbol' bindtap='clickButton'>-</button>
+  </view>
+  <view class='btnGroup'>
+    <button data-value='1' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>1</button>
+    <button data-value='2' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>2</button>
+    <button data-value='3' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>3</button>
+    <button data-value='add' class='btnItem' hover-class='btn-hover-symbol' bindtap='clickButton'>+</button>
+  </view>
+  <view class='btnGroup'>
+    <button data-value='negative' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>±</button>
+    <button data-value='0' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>0</button>
+    <button data-value='dot' class='btnItem' hover-class='btn-hover-num' bindtap='clickButton'>.</button>
+    <button data-value='equ' class='btnItem' hover-class='btn-hover-symbol' bindtap='clickButton'>=</button>
+  </view>
+</view>
